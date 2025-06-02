@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="china-map" viewBox="0 0 1500 1200" xmlns="http://www.w3.org/2000/svg">
+    <!-- 简化的中国地图SVG路径 -->
+    <path class="province" id="heilongjiang" d="M800 100 L850 50 L900 100 L850 150 Z" title="黑龙江"/>
+    <path class="province" id="jilin" d="M750 150 L800 100 L850 150 L800 200 Z" title="吉林"/>
+    <path class="province" id="liaoning" d="M700 200 L750 150 L800 200 L750 250 Z" title="辽宁"/>
+    <path class="province" id="hebei" d="M650 250 L700 200 L750 250 L700 300 Z" title="河北"/>
+    <path class="province" id="shandong" d="M700 300 L750 250 L800 300 L750 350 Z" title="山东"/>
+    <path class="province" id="jiangsu" d="M750 350 L800 300 L850 350 L800 400 Z" title="江苏"/>
+    <path class="province" id="zhejiang" d="M800 400 L850 350 L900 400 L850 450 Z" title="浙江"/>
+    <path class="province" id="anhui" d="M800 400 L850 350 L900 400 L850 450 Z" title="安徽"/>
+    <path class="province" id="fujian" d="M850 450 L900 400 L950 450 L900 500 Z" title="福建"/>
+    <!-- <path class="province" id="hainan" d="M800 575 L825 550 L850 575 L825 600 Z" title="海南"/> -->
+    <path class="province" id="guangdong" d="M800 500 L850 450 L900 500 L850 550 Z" title="广东"/>
+    <path class="province" id="guangxi" d="M750 500 L800 450 L850 500 L800 550 Z" title="广西"/>
+    <path class="province" id="yunnan" d="M650 500 L700 450 L750 500 L700 550 Z" title="云南"/>
+    <path class="province" id="guizhou" d="M700 450 L750 400 L800 450 L750 500 Z" title="贵州"/>
+    <path class="province" id="hunan" d="M750 400 L800 350 L850 400 L800 450 Z" title="湖南"/>
+    <path class="province" id="jiangxi" d="M800 400 L850 350 L900 400 L850 450 Z" title="江西"/>
+    <path class="province" id="hubei" d="M700 350 L750 300 L800 350 L750 400 Z" title="湖北"/>
+    <path class="province" id="henan" d="M650 300 L700 250 L750 300 L700 350 Z" title="河南"/>
+    <path class="province" id="shanxi" d="M600 250 L650 200 L700 250 L650 300 Z" title="山西"/>
+    <path class="province" id="shaanxi" d="M550 300 L600 250 L650 300 L600 350 Z" title="陕西"/>
+    <path class="province" id="sichuan" d="M600 400 L650 350 L700 400 L650 450 Z" title="四川"/>
+    <path class="province" id="gansu" d="M450 300 L500 250 L550 300 L500 350 Z" title="甘肃"/>
+    <path class="province" id="ningxia" d="M500 250 L550 200 L600 250 L550 300 Z" title="宁夏"/>
+    <path class="province" id="neimenggu" d="M600 150 L650 100 L700 150 L650 200 Z" title="内蒙古"/>
+    <path class="province" id="xinjiang" d="M300 200 L350 150 L400 200 L350 250 Z" title="新疆"/>
+    <path class="province" id="xizang" d="M400 350 L450 300 L500 350 L450 400 Z" title="西藏"/>
+    <path class="province" id="qinghai" d="M450 250 L500 200 L550 250 L500 300 Z" title="青海"/>
+    <path class="province" id="taiwan" d="M900 450 L925 425 L950 450 L925 475 Z" title="台湾"/>
+    <path class="province" id="hainan" d="M800 575 L825 550 L850 575 L825 600 Z" title="海南"/>
+    <path class="province" id="beijing" d="M675 225 L700 200 L725 225 L700 250 Z" title="北京"/>
+    <path class="province" id="tianjin" d="M700 225 L725 200 L750 225 L725 250 Z" title="天津"/>
+    <path class="province" id="shanghai" d="M825 375 L850 350 L875 375 L850 400 Z" title="上海"/>
+    <path class="province" id="chongqing" d="M650 375 L675 350 L700 375 L675 400 Z" title="重庆"/>
+    <path class="province" id="xianggang" d="M825 525 L837 512 L850 525 L837 537 Z" title="香港"/>
+    <path class="province" id="aomen" d="M812 525 L825 512 L837 525 L825 537 Z" title="澳门"/>
+</svg>

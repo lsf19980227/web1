@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My visited places | VisitedPlaces.com</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes, minimal-ui">
+
+    <meta name="description" content="I visited 0 countries out of 257. That's 0% of all countries in the world! #visitedcountries #mytravels #travelmap">
+    <meta name="keywords" content="maps, travel, visited countries, charts, visual">
+
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@visitedplaces" />
+    <meta name="twitter:image" content="https://www.visitedplaces.com/lib/index.png" />
+
+    <meta property="og:title" content="Interactive Visited Places Map" />
+    <meta property="og:site_name" content="VisitedPlaces.com" />
+    <meta property="og:url" content="https://www.visitedplaces.com/" />
+    <meta property="og:description" content="I visited 0 countries out of 257. That's 0% of all countries in the world! #visitedcountries #mytravels #travelmap" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://www.amcharts.com/inspiration/images/shots/index.jpg" />
+    <link rel="stylesheet" href="travel.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>我的旅行足迹</h1>
+        <div class="nav-options">
+          <a href="travel.html" class="nav-option">中国足迹</a>
+          <a href="travel_world.html" class="nav-option active">世界足迹</a>
+        </div>
+      </header>
+      <main>
+    <!-- VisitedPlaces.com code -->
+<script>
+// VisitedPlaces.com code
+var visitedplaces_config = {
+  "map": "world",
+  "projection": "geoNaturalEarth1",
+  "theme": "dark-green",
+  "water": 0,
+  "graticule": 0,
+  "names": 1,
+  "duration": 2000,
+  "slider": 0,
+  "autoplay": 0,
+  "autozoom": "none",
+  "data": [
+    {
+      "colors": {},
+      "places": []
+    }
+  ],
+  "home": "CN"
+};
+</script>
+<div id="chartdiv" style="width: 100%; height: 600px; margin: 30px auto; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #fff;">
+<script src="https://www.visitedplaces.com/js/common.js"></script>
+<script src="https://www.visitedplaces.com/js/viewer.js"></script>
+</div>
+<!-- end: VisitedPlaces.com code -->
+      </main>
+    </div>
+  </body>
+</html>

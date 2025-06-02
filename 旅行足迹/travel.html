@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的旅行足迹</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的旅行足迹</h1>
+            <div class="nav-options">
+                <a href="travel.html" class="nav-option active">中国足迹</a>
+                <a href="travel_world.html" class="nav-option">世界足迹</a>
+            </div>
+        </header>
+        <main>
+            <div id="map-container">
+                <!-- SVG地图将通过JS加载到这里 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 图片展示模态框 -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-province-city">省份 - 城市</h2>
+            </div>
+            <div class="slideshow-container">
+                <!-- 图片幻灯片将在这里 -->
+                <div class="slide-item">
+                    <img src="" alt="旅行图片" id="modal-image">
+                    <div class="image-info">
+                        <p id="modal-description">描述</p>
+                        <p id="modal-time">时间</p>
+                    </div>
+                </div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="travel.js"></script>
+</body>
+</html>
