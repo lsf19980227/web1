@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的旅行足迹🌆</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .map-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .china-map {
+            width: 100%;
+            height: auto;
+        }
+        .province {
+            fill: #e0e0e0;
+            stroke: #fff;
+            stroke-width: 1;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .province:hover {
+            fill: #b3b3b3;
+        }
+        .province.active {
+            fill: #4CAF50;
+        }
+        .map-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+        .map-description {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">我的空间</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../index.html#works">我的兴趣</a></li>
+                <li><a href="../index.html#contact">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 地图内容 -->
+    <div class="map-container">
+        <h1 class="map-title">我的旅行足迹</h1>
+        <p class="map-description">点击省份可以标记或取消已去过的地方</p>
+        <div id="map-wrapper">
+            <!-- 这里将插入中国地图SVG -->
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2024 个人博客. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 暗色模式切换按钮 -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 加载中国地图SVG
+            fetch('china-map.svg')
+                .then(response => response.text())
+                .then(svgContent => {
+                    document.getElementById('map-wrapper').innerHTML = svgContent;
+                    
+                    // 为所有省份添加点击事件
+                    document.querySelectorAll('.province').forEach(province => {
+                        province.addEventListener('click', function() {
+                            this.classList.toggle('active');
+                        });
+                    });
+                })
+                .catch(error => console.error('Error loading map:', error));
+        });
+    </script>
+</body>
+</html>
