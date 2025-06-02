@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获奖证书时光轴</title>
+    <link rel="stylesheet" href="certificate.css">
+</head>
+<body>
+    <header>
+        <h1>我的获奖证书</h1>
+    </header>
+
+    <main>
+        <section id="timeline-container">
+            <!-- 时间轴将在这里动态生成 -->
+            <div class="timeline">
+                <!-- 示例证书卡片 -->
+                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-content">
+                        <div class="certificate-card">
+                            <img src="placeholder-cert.png" alt="证书缩略图" class="certificate-thumbnail">
+                            <div class="certificate-category-badge">学术</div>
+                            <h3>证书名称示例1</h3>
+                            <p class="certificate-date">2023年5月</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-content">
+                        <div class="certificate-card">
+                            <img src="placeholder-cert.png" alt="证书缩略图" class="certificate-thumbnail">
+                            <div class="certificate-category-badge">艺术</div>
+                            <h3>证书名称示例2</h3>
+                            <p class="certificate-date">2022年10月</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多证书卡片 -->
+            </div>
+        </section>
+
+        <!-- 证书详情视图 (默认隐藏) -->
+        <div id="certificate-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="modal-body">
+                    <div class="certificate-image-container">
+                        <img src="" alt="证书大图" id="modal-certificate-image">
+                        <video controls id="modal-video-player">
+                            <source src="" type="video/mp4">
+                            您的浏览器不支持 HTML5 video 标签。
+                        </video>
+                    </div>
+                    <div class="certificate-details-panel">
+                        <h2 id="modal-certificate-title">证书名称</h2>
+                        <p id="modal-certificate-time">获奖时间：</p>
+                        <p id="modal-certificate-location">获奖地点：</p>
+                        <p id="modal-certificate-issuer">颁发机构：</p>
+                        <div id="modal-certificate-category" class="category-tag">类别</div>
+                        <div class="audio-player-container">
+                            <p>语音解说：</p>
+                            <audio controls id="modal-audio-player">
+                                <source src="" type="audio/mpeg">
+                                您的浏览器不支持音频播放。
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 获奖证书展示</p>
+    </footer>
+
+    <script src="certificate.js"></script>
+</body>
+</html>

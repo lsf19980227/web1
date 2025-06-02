@@ -1,0 +1,299 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* 时间轴容器 */
+#timeline-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 时间轴线 (垂直) */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ddd;
+    transform: translateX(-50%);
+}
+
+/* 时间轴项目 */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+/* 时间轴项目内容 */
+.timeline-content {
+    position: relative;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* 证书卡片 */
+.certificate-card {
+    cursor: pointer;
+}
+
+.certificate-thumbnail {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.certificate-category-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+
+.certificate-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.certificate-date {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* 时间轴项目交替排列 */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 30px; /* 调整间距 */
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 30px; /* 调整间距 */
+}
+
+/* 时间轴节点标记 */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid #3498db;
+    top: 20px; /* 根据实际内容调整 */
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -8px; /* 调整到时间轴线上 */
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -8px; /* 调整到时间轴线上 */
+}
+
+/* 悬停交互 */
+.timeline-content:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:hover::before { /* 高亮时间轴线部分 */
+    /* 实际高亮效果可能需要JS配合或更复杂的CSS */
+}
+
+.timeline-content:hover {
+    /* 边缘光晕效果，可以使用 box-shadow 或 filter: drop-shadow */
+    filter: drop-shadow(0 0 10px rgba(52, 152, 219, 0.7));
+}
+
+/* 证书详情模态框 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景变暗 */
+    animation: fadeIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: scaleUp 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-body {
+    display: flex;
+    gap: 20px;
+}
+
+.certificate-image-container {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 4px;
+}
+
+#modal-video-player {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: #000;
+}
+
+.certificate-video-container {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 4px;
+}
+
+#modal-certificate-image {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 4px;
+}
+
+#modal-certificate-video {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 4px;
+}
+
+.certificate-details-panel {
+    flex: 1;
+}
+
+.certificate-details-panel h2 {
+    color: #3498db;
+    margin-top: 0;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.audio-player-container audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px; /* 调整时间轴线位置 */
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-left: 70px; /* 调整内容区域 */
+        padding-right: 15px;
+    }
+
+    .timeline-item::after,
+    .timeline-item:nth-child(even)::after {
+        left: 22px; /* 调整节点标记位置 */
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    margin-top: 2rem;
+}
