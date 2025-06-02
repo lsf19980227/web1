@@ -1,0 +1,99 @@
+/* 文章详情页样式 */
+.article-detail {
+    max-width: 800px;
+    margin: 80px auto 2rem;
+    padding: 1rem;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.article-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.article-meta .category {
+    color: var(--accent-color);
+}
+
+.article-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.article-text {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.article-text h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+.article-text h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.article-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.article-text ul,
+.article-text ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.article-text li {
+    margin-bottom: 0.5rem;
+}
+
+.article-text blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    background-color: var(--card-bg);
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .article-detail {
+        padding: 1rem;
+    }
+
+    .article-header h1 {
+        font-size: 2rem;
+    }
+
+    .article-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .article-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .article-text p {
+        font-size: 1rem;
+    }
+}
