@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <!-- 引入Noto Sans SC字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">飞飞世界🦋</div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#works">我的兴趣</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner图 -->
+    <div class="banner">
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/banner.jpg" alt="Banner">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- 我的介绍 -->
+    <section class="about-me">
+        <div class="about-card">
+            <div class="about-image">
+                <img src="images/travel.jpg" alt="个人照片">
+            </div>
+            <div class="about-content">
+                <h2>关于我</h2>
+                <p>你好！我是这个博客的主人。在这里，我会分享我的绘画作品、旅行足迹和我与架子鼓的相爱相杀。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我的作品 -->
+    <section id="works" class="works-section">
+        <h2 class="section-title">我的兴趣</h2>
+        <div class="articles-grid">
+        <div class="article-card">
+            <a href="articles/drawing.html" class="article-link">
+                <div class="article-image">
+                    <img src="images/draw.jpg" alt="文章封面">
+                </div>
+                <div class="article-content">
+                    <div class="article-category">🎨</div>
+                    <h2 class="article-title">绘画作品</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="article-card travel-card">
+            <div class="article-link">
+                <div class="article-image">
+                    <img src="images/about.jpg" alt="文章封面">
+                </div>
+                <div class="article-content">
+                    <div class="article-category">🚶</div>
+                    <h2 class="article-title">旅行足迹</h2>
+                </div>
+                <div class="travel-options">
+                    <a href="旅行足迹/travel.html" class="travel-option">中国足迹</a>
+                    <a href="旅行足迹/travel_world.html" class="travel-option">世界足迹</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <a href="获奖证书时光轴/certificate.html" class="article-link">
+                <div class="article-image">
+                    <img src="images/certificate.png" alt="文章封面">
+                </div>
+                <div class="article-content">
+                    <div class="article-category">🚶</div>
+                    <h2 class="article-title">获奖证书时光轴</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="article-card">
+            <a href="articles/drum.html" class="article-link">
+                <div class="article-image">
+                    <img src="images/drum.jpg" alt="文章封面">
+                </div>
+                <div class="article-content">
+                    <div class="article-category">🥁</div>
+                    <h2 class="article-title">with drum</h2>
+                </div>
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">联系我</h2>
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3>与我联系</h3>
+                <p>如果您对我的作品感兴趣，或者想要了解更多信息，欢迎通过以下方式与我联系：</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: lsf_227@foxmail.com</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-weixin"></i>
+                        <span>WeChat: lsf_123456</span>
+                    </div>
+                </div>
+                <button id="leave-message-btn" class="leave-message-btn">
+                    <i class="fas fa-comment"></i>
+                    给我留言
+                </button>
+            </div>
+            <div class="qr-code">
+                <img src="images/code.jpg" alt="联系二维码">
+                <p>扫描二维码联系我</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 留言弹窗 -->
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>留言板</h3>
+            <form id="message-form" class="message-form">
+                <div class="form-group">
+                    <label for="name">您的称呼：</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">留言内容：</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">提交留言</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2024 个人博客. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <button id="back-to-top" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- 暗色模式切换按钮 -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- 文章弹窗 -->
+    <div id="article-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-article-content"></div>
+        </div>
+    </div>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
